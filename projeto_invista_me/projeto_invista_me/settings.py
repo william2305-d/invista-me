@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-o@c3$1^^sy3l-n=r)9h!q4y7ucvf%@zapx&==jbo8e6d57mng8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'projeto_invista_me.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'postgres',
+        'USER': 'postgres.wvhczhzmjrvuaxfimhau',
+        'PASSWORD': 'RxjNmOeg9HFK29C8',
+        'HOST': 'aws-0-us-west-1.pooler.supabase.com',
+        'PORT': '6543'
     }
 }
 
